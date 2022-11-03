@@ -1,28 +1,30 @@
 {
+  "favoritos": [
+    {
+      "nome": "Pizza",
+      "valor": 29.9,
+      "quantidade": 1,
+      "id": 1
+    },
+    {
+      "nome": "Pizza",
+      "valor": 29.9,
+      "quantidade": 1,
+      "id": 2
+    }
+  ],
   "carrinho": [
     {
-      "id": 1,
       "nome": "Pizza",
-      "quantidade": 2,
-      "valor": 29.9
-    },
-    {
-      "id": 2,
-      "nome": "Coca-Cola",
+      "valor": 29.9,
       "quantidade": 1,
-      "valor": 9.9
+      "id": 1
     },
     {
-      "id": 3,
-      "nome": "Dindin",
-      "quantidade": 4,
-      "valor": 2.9
-    },
-    {
-      "nome": "Pratinho Gourmet",
-      "valor": 12.9,
+      "nome": "Pizza",
+      "valor": 29.9,
       "quantidade": 1,
-      "id": 4
+      "id": 2
     }
   ],
   "produtos": [

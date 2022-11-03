@@ -6,15 +6,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
+import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from '@mui/material';
 import {useState} from "react";
-
-import { 
-    ShoppingCart, 
-    Place, 
-    RestaurantMenu,
-    Star
-} from '@mui/icons-material';
+import {ShoppingCart,Place,RestaurantMenu,Star} from '@mui/icons-material';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -36,8 +30,10 @@ export default function Navbar() {
       <Drawer open={menu} onClose={handleMenu}>
         <div style={{width: '150px', margin: 20}} align="center">
             LOGO 
-        </div>  
-        <Divider/>   
+        </div>
+        <Divider/>
+        <Button color="inherit">Login</Button>
+        <Divider/>
         <List>
             <ListItem button onClick={() => redirect('/endereco')}>
                 <ListItemIcon><Place/></ListItemIcon>
@@ -72,7 +68,6 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Minha comida, minha vida
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>

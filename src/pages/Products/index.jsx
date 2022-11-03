@@ -1,41 +1,37 @@
 import React from "react";
-import {
-    Card,
-    CardContent,
-    CardActionArea,
-    CardMedia,
-    Divider,
-    Button,
-    Typography
-} from "@mui/material";
-
+import {Card,CardContent,CardActionArea,CardMedia,Divider,Button,IconButton,Typography} from "@mui/material";
+import {Add,Star,StarBorder} from '@mui/icons-material';
 import "./styles.css";
-
 export default function Products() {
-    const [items, setItems] = React.useState([]);
-
-    React.useEffect(() => {
-        fetch('http://localhost:8000/produtos')
-            .then(res => res.json())
-            .then(dados => setItems(dados));
+  const [items, setItems] = React.useState([]);
+  React.useEffect(() => {
+    fetch('http://localhost:8000/produtos')
+    .then(res => res.json())
+    .then(dados => setItems(dados));
             //npx json-server db.json --port 8000
-    }, []);
-
-
-    const addProduto = (nome, valor) => {
-        fetch('http://localhost:8000/carrinho', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                nome: nome,
-                valor: valor,
-                quantidade: 1
-            })
-        });
-
-        alert('Pronto');
+  }, []);
+  const addProduto = (nome, valor) => {
+    fetch('http://localhost:8000/carrinho', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        nome: nome,
+        valor: valor,
+        quantidade: 1
+      })
+    });
+  };
+    const favProduto = (nome, valor) => {
+      fetch('http://localhost:8000/favoritos', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          nome: nome,
+          valor: valor,
+          quantidade: 1
+        })
+      });
     };
-
     const CadaProduto = (props) => {
         return (
             <Card style={{marginTop: '10px'}}>
@@ -51,8 +47,10 @@ export default function Products() {
                     <Divider/>
                     <div style={{display: 'flex', marginTop: 10, justifyContent: 'space-between'}}>
                         <Typography>R$ {props.valor}</Typography>
-
-                        <Button onClick={() => addProduto(props.nome, props.valor)} align="right" variant="contained" color="success">Add</Button>
+                        <div align="right">
+                          <IconButton onClick={() => addProduto(props.nome, props.valor)} aria-label="Favorito" component="label" color="warning" size="large"><StarBorder/></IconButton>
+                          <IconButton onClick={() => favProduto(props.nome, props.valor)} color="success" size="large"><Add/></IconButton>
+                        </div>
                     </div>
                 </CardContent>
             </Card>

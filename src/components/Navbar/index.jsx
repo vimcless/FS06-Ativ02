@@ -29,28 +29,28 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <Drawer open={menu} onClose={handleMenu}>
         <div style={{width: '150px', margin: 20}} align="center">
-            LOGO 
+          LOGO 
         </div>
         <Divider/>
         <Button color="inherit">Login</Button>
         <Divider/>
         <List>
-            <ListItem button onClick={() => redirect('/endereco')}>
-                <ListItemIcon><Place/></ListItemIcon>
-                <ListItemText>Endereço</ListItemText>
-            </ListItem>
-            <ListItem button onClick={() => redirect('/carrinho')}>
-                <ListItemIcon><ShoppingCart/></ListItemIcon>
-                <ListItemText>Carrinho</ListItemText>
-            </ListItem>
-            <ListItem button onClick={() => redirect('/listar')}>
-                <ListItemIcon><RestaurantMenu/></ListItemIcon>
-                <ListItemText>Cardapio</ListItemText>
-            </ListItem>
-            <ListItem button onClick={() => redirect('/favoritos')}>
-                <ListItemIcon><Star/></ListItemIcon>
-                <ListItemText>Favoritos</ListItemText>
-            </ListItem>
+          <ListItem button onClick={() => redirect('/endereco')}>
+            <ListItemIcon><Place/></ListItemIcon>
+            <ListItemText>Endereço</ListItemText>
+          </ListItem>
+          <ListItem button onClick={() => redirect('/carrinho')}>
+            <ListItemIcon><ShoppingCart/></ListItemIcon>
+            <ListItemText>Carrinho</ListItemText>
+          </ListItem>
+          <ListItem button onClick={() => redirect('/listar')}>
+            <ListItemIcon><RestaurantMenu/></ListItemIcon>
+            <ListItemText>Cardapio</ListItemText>
+          </ListItem>
+          <ListItem button onClick={() => redirect('/favoritos')}>
+            <ListItemIcon><Star/></ListItemIcon>
+            <ListItemText>Favoritos</ListItemText>
+          </ListItem>
         </List>
       </Drawer>  
       <AppBar position="static">

@@ -30,13 +30,25 @@
       "id": 1,
       "nome": "Pizza",
       "valor": 29.9,
-      "foto": "https://img.itdg.com.br/tdg/images/blog/uploads/2022/07/5-itens-necessarios-para-se-tornar-um-pizzaiolo-neste-Dia-da-Pizza.jpg?mode=crop&width={:width=%3E150,%20:height=%3E130}"
+      "foto": "https://img.cybercook.com.br/imagens/receitas/619/massa-de-pizza-para-microondas-2.jpeg"
     },
     {
       "id": 2,
       "nome": "Pratinho Gourmet",
       "valor": 12.9,
-      "foto": "https://img.itdg.com.br/tdg/images/blog/uploads/2022/07/5-itens-necessarios-para-se-tornar-um-pizzaiolo-neste-Dia-da-Pizza.jpg?mode=crop&width={:width=%3E150,%20:height=%3E130}"
+      "foto": "https://fthmb.tqn.com/uPrkLend_jmkaOmcUz06S0JGy5w=/2044x1469/filters:fill(auto,1)/Beef-Wellington_Carin-Krasner-Getty-56a434ca5f9b58b7d0d5db61.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Coca-Cola",
+      "valor": 9.9,
+      "foto": "http://www.drinksindustryireland.ie/wp-content/uploads/2015/12/Soft-Drinkslow.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Dindin",
+      "valor": 2.9,
+      "foto": "https://www.gabriellfreitass.com.br/wp-content/uploads/2018/03/IMG_0598.jpg"
     }
   ]
 }

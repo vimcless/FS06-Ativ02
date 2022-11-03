@@ -13,8 +13,7 @@ import {
     ShoppingCart, 
     Place, 
     RestaurantMenu,
-    Star,
-    StarBorder
+    Star
 } from '@mui/icons-material';
 
 import { useNavigate } from 'react-router-dom';
@@ -53,7 +52,7 @@ export default function Navbar() {
                 <ListItemText>Cardapio</ListItemText>
             </ListItem>
             <ListItem button onClick={() => redirect('/favoritos')}>
-                <ListItemIcon><StarBorder/></ListItemIcon>
+                <ListItemIcon><Star/></ListItemIcon>
                 <ListItemText>Favoritos</ListItemText>
             </ListItem>
         </List>

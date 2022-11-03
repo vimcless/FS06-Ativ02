@@ -6,14 +6,15 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
 import {useState} from "react";
 
 import { 
     ShoppingCart, 
     Place, 
-    RestaurantMenu 
+    RestaurantMenu,
+    Star,
+    StarBorder
 } from '@mui/icons-material';
 
 import { useNavigate } from 'react-router-dom';
@@ -37,27 +38,26 @@ export default function Navbar() {
         <div style={{width: '150px', margin: 20}} align="center">
             LOGO 
         </div>  
-
         <Divider/>   
-
         <List>
             <ListItem button onClick={() => redirect('/endereco')}>
-                <ListItemIcon> <Place/> </ListItemIcon>
-                <ListItemText> Endereço </ListItemText>
+                <ListItemIcon><Place/></ListItemIcon>
+                <ListItemText>Endereço</ListItemText>
             </ListItem>
-
             <ListItem button onClick={() => redirect('/carrinho')}>
-                <ListItemIcon> <ShoppingCart/> </ListItemIcon>
-                <ListItemText> Carrinho </ListItemText>
+                <ListItemIcon><ShoppingCart/></ListItemIcon>
+                <ListItemText>Carrinho</ListItemText>
             </ListItem>
-
             <ListItem button onClick={() => redirect('/listar')}>
-                <ListItemIcon> <RestaurantMenu/> </ListItemIcon>
-                <ListItemText> Cardapio </ListItemText>
+                <ListItemIcon><RestaurantMenu/></ListItemIcon>
+                <ListItemText>Cardapio</ListItemText>
+            </ListItem>
+            <ListItem button onClick={() => redirect('/favoritos')}>
+                <ListItemIcon><StarBorder/></ListItemIcon>
+                <ListItemText>Favoritos</ListItemText>
             </ListItem>
         </List>
       </Drawer>  
-
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -71,7 +71,7 @@ export default function Navbar() {
             <MenuIcon/>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Meu Ifood
+            Minha comida, minha vida
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>

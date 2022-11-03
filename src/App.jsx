@@ -4,13 +4,11 @@ import Carrinho from "./pages/Carrinho"
 import FormEndereco from "./pages/FormEndereco"
 import Products from "./pages/Products"
 import Favorite from "./pages/Favorite"
-
 export default function App() {
   return (
     <div>
       <BrowserRouter>
         <Navbar/>
-
         <Routes>
           <Route path="/" element={<h1>Ola mundo</h1>} />
           <Route path="/listar" element={<Products/>} />

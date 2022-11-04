@@ -1,32 +1,6 @@
 {
-  "favoritos": [
-    {
-      "nome": "Pizza",
-      "valor": 29.9,
-      "quantidade": 1,
-      "id": 1
-    },
-    {
-      "nome": "Pizza",
-      "valor": 29.9,
-      "quantidade": 1,
-      "id": 2
-    }
-  ],
-  "carrinho": [
-    {
-      "nome": "Pizza",
-      "valor": 29.9,
-      "quantidade": 1,
-      "id": 1
-    },
-    {
-      "nome": "Pizza",
-      "valor": 29.9,
-      "quantidade": 1,
-      "id": 2
-    }
-  ],
+  "favoritos": [],
+  "carrinho": [],
   "produtos": [
     {
       "id": 1,

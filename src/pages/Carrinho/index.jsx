@@ -4,7 +4,7 @@ import React from "react";
 import "./styles.css";
 export default function Carrinho() {
   const [items, setItems] = React.useState([]);
-  const [total, setTotal] = React.useState(0);
+  let [total, setTotal] = React.useState(0);
   React.useEffect(() => {
     fetch('http://localhost:8000/carrinho')
     .then(res => res.json())

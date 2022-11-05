@@ -1,5 +1,5 @@
 import React from "react";
-import {Divider,IconButton} from "@mui/material";
+import {Card,CardContent,CardActionArea,CardMedia,Divider,IconButton,Container,Typography} from "@mui/material";
 import {Star,StarBorder} from '@mui/icons-material';
 import "./styles.css"
 export default function Favorite () {
@@ -20,13 +20,35 @@ export default function Favorite () {
       <Divider/>
       { fav.map(cadaFav => {
         return (
-          <div>
-            <span><a href="http://localhost:3000/listar">{cadaFav.nome}</a></span>
-            <IconButton onClick={() => favProduto(cadaFav.id)} aria-label="Desfavorito" component="label" color="warning" size="large"><Star/></IconButton>
-          </div>
+          <Card className='page-products'>
+                <CardActionArea>
+                    <CardMedia component="img" height="200" image={cadaFav.foto}/>
+                    
+                    <CardContent>
+                        <Typography variant="h5"><a href="http://localhost:3000/listar">{cadaFav.nome}</a></Typography>
+                    </CardContent>
+                </CardActionArea>
+
+                <CardContent>
+                    <Divider/>
+                    <div>
+                        <div align="center">
+                          <IconButton onClick={() => favProduto(cadaFav.id)} aria-label="Desfavorito" component="label" color="warning" size="large"><Star/></IconButton>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
         )
         }) 
       }
+      
       </div>
     )
 }
+
+/*
+<div>
+            <span><a href="http://localhost:3000/listar">{cadaFav.nome}</a></span>
+            <IconButton onClick={() => favProduto(cadaFav.id)} aria-label="Desfavorito" component="label" color="warning" size="large"><Star/></IconButton>
+          </div>
+*/

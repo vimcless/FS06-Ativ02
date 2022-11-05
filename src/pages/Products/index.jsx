@@ -27,7 +27,7 @@ export default function Products() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           nome: nome,
-          valor: foto,
+          foto: foto,
           prodid: prod
         })
       });

@@ -1,6 +1,13 @@
 {
   "favoritos": [],
-  "carrinho": [],
+  "carrinho": [
+    {
+      "nome": "Pizza",
+      "valor": 29.9,
+      "quantidade": 1,
+      "id": 1
+    }
+  ],
   "produtos": [
     {
       "id": 1,

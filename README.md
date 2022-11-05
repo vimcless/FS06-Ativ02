@@ -1,6 +1,7 @@
-# APP Lanchonete
+# APP Lanchonete (versão 2ª atividade)
 
 Aplicação desenvolvida durante as aulas de React da turma FullStack 06 da Digital College, as segundas-feiras a noite.
+Esta versão tem aba Favorito para adicionar produtos favoritos
 
 ## Tutorial para executar a aplicação
 Abaixo você verá alguns passos para colocar a aplicação para rodar.
